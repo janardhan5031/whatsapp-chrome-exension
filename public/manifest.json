@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsApp Extension",
+  "version": "1.0",
+  "description": "Add a button to WhatsApp Web",
+  "permissions": ["activeTab", "storage"],
+  "web_accessible_resources": [
+    {
+      "resources": ["*"],
+      "matches": ["https://web.whatsapp.com/*"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';",
+    "sandbox": "sandbox allow-scripts; allow-same-origin;"
+  }
+}

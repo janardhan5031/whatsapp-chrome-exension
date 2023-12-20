@@ -1,0 +1,10 @@
+{
+  "src/main.tsx": {
+    "css": [
+      "static/style.css"
+    ],
+    "file": "static/main.js",
+    "isEntry": true,
+    "src": "src/main.tsx"
+  }
+}
