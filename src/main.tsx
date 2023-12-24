@@ -1,6 +1,8 @@
-import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
+import ReactDOM from 'react-dom/client';
+import ActionsBar from './ActionsBar';
 
-ReactDOM.createRoot(document.getElementById("whatsapp-extension-root")!).render(
-    <App />
-);
+setTimeout(() => {
+  ReactDOM.createRoot(document.getElementById('tabsContainer')!).render(
+    <ActionsBar />
+  );
+}, 10000);
